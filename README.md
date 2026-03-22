@@ -59,3 +59,49 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+### 2. env file setup
+```bash
+GROQ_API_KEY=your_groq_key_here
+DEEPGRAM_API_KEY=your_deepgram_key_here
+TWILIO_ACCOUNT_SID=your_twilio_key_here
+TWILIO_AUTH_TOKEN=your_twilio_token_here
+TWILIO_PHONE_NUMBER=your_twilio_phone_number_here
+# Ngrok Domain (No https://)
+NGROK_URL=your.ngrok-free.app
+```
+### 3. Terminal 1 (frontend run)
+```bash
+cd frontend
+npm run dev
+# Runs on http://localhost:5173
+```
+
+### 4. Terminal 2 (backend run)
+```bash
+cd backend
+uvicorn main:app --reload
+# Runs on http://localhost:8000
+```
+
+### 5. Terminal 3 (Ngork run)
+```bash
+Ngrok installed on your machine.
+Run Ngrok.exe on your machine.
+run command : ngrok http 8000
+```
+
+### 6. Triggering a Live Phone Call
+```bash
+1. Open the React Dashboard (http://localhost:5173).
+
+2. Enter your real cell phone number with the country code (e.g., 91(9876543210)) in the Customer Identifier box.
+
+3. Click the purple "Call Phone" button.
+
+4. Your phone will ring! Answer it, and the AI will speak directly to you over the cellular network while the React dashboard updates in real-time.
+```
+
+
+
