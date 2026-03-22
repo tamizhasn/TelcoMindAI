@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+websockets
+python-dotenv
+groq
+deepgram-sdk
+twilio
+httpx
+chromadb
